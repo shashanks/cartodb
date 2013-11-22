@@ -88,6 +88,9 @@ The Windshaft-cartodb component powers the CartoDB Maps API. To install it:
     cd Windshaft-cartodb
     git checkout master
     npm install
+    
+    (error node-gyp)
+    solution:-sudo npm install node-gyp -g
 
 Install RVM and bundle cartodb: # cd to cartodb20/
 
