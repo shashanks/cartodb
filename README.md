@@ -26,6 +26,8 @@ postgis installation:
      make && make install
 
 CartoDB depends on a geospatial database template named template_postgis. change to postgres user (sudo su postgres)
+set POSTGIS_SQL_PATH = /usr/share/postgresql/9.1/contrib/postgis-2.0/
+
 
     cd /usr/share/postgresql/9.1/contrib/postgis-2.0/
     createdb -E UTF8 template_postgis
