@@ -149,5 +149,20 @@ Create an Init Script to Manage nginx.
     ->  chmod +x /etc/init.d/nginx
     ->  /usr/sbin/update-rc.d -f nginx defaults
     ->  sudo /etc/init.d/nginx start
+    
+Deploying a Ruby on Rails application.
 
+     -> open the nginx config file (/opt/nginx/conf/nginx.conf)
+     -> configure as shown below
+        server {
+                listen 80;
+                server_name www.yourhost.com;
+                root /somewhere/public;   # <--- be sure to point to 'public'!
+                passenger_enabled on;
+              }
+        where : server_name = domain name, if  local give 127.0.0.1
+        root  : whole path of your application pointing to public directory.
+
+
+    
 Installation Based on the original instructions from https://github.com/CartoDB/cartodb
