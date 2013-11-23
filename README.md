@@ -128,8 +128,21 @@ varnish config /etc/varnish/default.vcl
         DAEMON_OPTS="-a :80 \
                  -T localhost:6082 \
                  -f /etc/varnish/default.vcl \
-                 -S /etc/varnish/secret \
+                 -S /etc/varnish/secret \ 
                  -s malloc,1G"
 
-
+Setting up the Server via RubyGems
+    ->  which ruby 
+    ->  gem install passenger
+    ->  passenger-install-nginx-module
+    ->  ps aux | grep flying-passenger
+    ->  kill PID_OF_FLYING_PASSENGER
+    ->  passenger-memory-stats
+    
+Create an Init Script to Manage nginx
+    ->  wget -O init-deb.sh http://library.linode.com/assets/1139-init-deb.sh
+    ->  mv init-deb.sh /etc/init.d/nginx
+    ->  chmod +x /etc/init.d/nginx
+    ->  /usr/sbin/update-rc.d -f nginx defaults
+    ->  sudo /etc/init.d/nginx start
 Installation Based on the original instructions from https://github.com/CartoDB/cartodb
