@@ -160,8 +160,10 @@ Deploying a Ruby on Rails application.
                 root /somewhere/public;   # <--- be sure to point to 'public'!
                 passenger_enabled on;
               }
-        where : server_name = domain name, if  local give 127.0.0.1
-        root  : whole path of your application pointing to public directory.
+        
+        
+        Note:-   server_name = domain name, if  local give 127.0.0.1
+                 root  : whole path of your application pointing to public directory.
 
 
     
