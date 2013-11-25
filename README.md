@@ -164,6 +164,11 @@ Deploying a Ruby on Rails application.
         
         Note:-   server_name = domain name, if  local give 127.0.0.1
                  root  : whole path of your application pointing to public directory.
+                 
+                 
+SSL Certificate 
+http://naveenagarwal287.wordpress.com/2013/06/27/set-up-secure-sockets-layer-ssl-for-your-ruby-on-rails-app-using-nginx-on-ubuntu/
+
 
 
     
