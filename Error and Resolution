@@ -1,6 +1,6 @@
 Error and Resolution
 
-  Error:- 
+  Error:- 1
 	
 	LINE 1: SELECT * FROM "users" LIMIT 1
                       ^: SELECT * FROM "users" LIMIT 1
@@ -12,12 +12,46 @@ Error and Resolution
 
   Tracing:-
   
-  1) searched in logs
-  2) rake cartodb:db:load_functions --trace   (source :- https://groups.google.com/d/msg/cartodb/YYXCevIvigs/-khxt8LhwLMJ)
+  	1) searched in logs
+  	2) rake cartodb:db:load_functions --trace   (source :- https://groups.google.com/d/msg/cartodb/YYXCevIvigs/-khxt8LhwLMJ)
 
   Solution:-(must be in cartodb home directory)
   
-  rake db:migrate
+  	rake db:migrate
   
   Source:-
-  http://stackoverflow.com/a/11529869
+  	http://stackoverflow.com/a/11529869
+
+
+  Error:- 2  (Precompile error)
+  
+   	Started GET "/login" for 127.0.0.1 at 2013-11-26 14:35:45 +0530
+	Processing by SessionsController#new as HTML
+  	Rendered sessions/new.html.erb within layouts/front_layout (81.7ms)
+	Completed 500 Internal Server Error in 174ms
+	[Rollbar] Reporting exception: application.js isn't precompiled
+	[Rollbar] Scheduling payload
+	[Rollbar] Sending payload
+	[Rollbar] Got unexpected status code from Rollbar api: 401
+	[Rollbar] Response: {
+  	"err": 1,
+	 "message": "unauthorized"
+	}
+	
+  Tracing:-
+  
+        logs
+
+  Solution:- 
+  
+  	# config/environments/production.rb
+	...
+	config.assets.compile = true
+	...
+	
+  Source:- 
+         
+         http://stackoverflow.com/a/7278355
+	
+	
+
