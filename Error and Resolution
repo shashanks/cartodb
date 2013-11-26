@@ -1,0 +1,20 @@
+Error and Resolution
+
+  Error:- 
+	
+	LINE 1: SELECT * FROM "users" LIMIT 1
+                      ^: SELECT * FROM "users" LIMIT 1
+  Ignoring statsd, because there were a error loading the config
+  PG::Error: ERROR:  relation "user_tables" does not exist
+  LINE 1: SELECT * FROM "user_tables" LIMIT 1
+                      ^: SELECT * FROM "user_tables" LIMIT 1
+  PG::Error: ERROR:  relation "user_tables" does not exist
+
+  Tracing:-
+  
+  1) searched in logs
+  2) rake cartodb:db:load_functions --trace
+
+  Solution:-(must be in cartodb home directory)
+  
+  rake db:migrate
