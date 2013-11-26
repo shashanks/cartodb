@@ -38,6 +38,13 @@ Error and Resolution
 	 "message": "unauthorized"
 	}
 	
+  Error:- 3
+  
+        rake aborted!
+        can't convert Fixnum into String
+
+   
+	
   Tracing:-
   
         logs
@@ -52,6 +59,17 @@ Error and Resolution
   Source:- 
          
          http://stackoverflow.com/a/7278355
-	
-	
-
+  
+  tracing:-
+        
+         error while creating user through script
+         logs
+  
+  Solution:- 
+  
+	 password: "123"
+         
+         Note:- put the password in double coute
+         
+  Source :- 
+         http://stackoverflow.com/a/3769120
