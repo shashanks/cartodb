@@ -13,7 +13,7 @@ Error and Resolution
   Tracing:-
   
   1) searched in logs
-  2) rake cartodb:db:load_functions --trace
+  2) rake cartodb:db:load_functions --trace   (source :- https://groups.google.com/d/msg/cartodb/YYXCevIvigs/-khxt8LhwLMJ)
 
   Solution:-(must be in cartodb home directory)
   
